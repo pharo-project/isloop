@@ -11,6 +11,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: var(--text-font-family);
   font-size: var(--text-font-size);
@@ -126,9 +129,10 @@ img.teacher-photo {
 }
 
 footer {
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 3rem;
   text-align: center;
+  background-color: var(--color-light-gray);
 }
 
 footer p {
