@@ -19,6 +19,7 @@ body {
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: normal;
+  line-height: 150%;
 }
 
 nav {
@@ -102,6 +103,7 @@ a {
 
 main li {
   padding: 0.3rem;
+  line-height: 120%;
 }
 
 span.ltrText {
@@ -146,7 +148,7 @@ footer p {
   margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) { 
   main {
     padding-bottom: 3rem;
   }
