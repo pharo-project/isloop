@@ -163,6 +163,10 @@ footer p {
   margin-bottom: 0;
 }
 
+footer span {
+  display: inline-block;
+}
+
 .footer-logos img {
   height: 2.5rem;
   background: transparent;
