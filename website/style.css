@@ -151,6 +151,37 @@ img.banner {
   height: 30rem;
 }
 
+.hotels-table {
+  text-align: left;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.hotels-table tbody {
+  display: table;
+  width: 100%;
+}
+
+.table-wrapper {
+  position: relative;
+}
+
+.table-scroll {
+  overflow: auto;
+}
+
+.hotels-table th {
+  background-color: var(--color-light-gray);
+  font-weight: normal;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.hotels-table td {
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
 footer {
   margin-top: auto;
   padding: 3rem;
