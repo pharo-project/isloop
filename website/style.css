@@ -151,6 +151,26 @@ img.banner {
   height: 30rem;
 }
 
+table {
+  border: 0;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 1.2em;
+}
+
+table tr {
+  background-color: var(--color-light-gray);
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
 .hotels-table {
   text-align: left;
   display: block;
