@@ -118,7 +118,7 @@
 
       <h4>2. ProfStef Tutorial</h4>
 
-      Open the Playground and evaluate the following line: <code>ProfStef go.</code>
+      <p>Open the Playground and evaluate the following line: <code>ProfStef go.</code></p>
 
       <h4>4. Objects and Classes</h4>
 
@@ -140,16 +140,42 @@
         <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S6-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Class methods</a></li>
       </ul>
 
-      <h2>Day 2: Testing and Good Practices</h2>
+      <h2>Day 2: Inheritance, Method Lookup, and Dispatch</h2>
 
-      <p>You will learn how to verify your application with unit tests. We will also teach you the practice of test-driven development (TDD) which means that you start by writing tests and then write the code to make them pass. Using the unique features of Pharo, you will learn a very powerful practice of extreme test-driven development, which means that you will write your code inside a debugger. You will also learn some advance practices of object-oriented programming such as design patterns, as well as the good practices from experienced Pharo developers.</p>
+      <p>You will learn about inheritance and polymorphism - the key concepts in object-oriented programming. You will understand why sending a message is making a choice based on classes. You will also understand what is to send a message and how lookup works.</p>
+
+      <h4>1. Exercise: Counter</h4>
+
+      <p>Finish the exercise.</p>
+
+      <h4>2. Kata: Rock-Paper-Scissors (if-else)</h4>
+
+      <p>This exercise consists of implementing the rock paper scissor game. For this, you will need to have a class named <code>RockPaperScissors</code>. For playing the game, the user needs to use the class like this:</p>
+
+      <pre><code>game := RockPaperScissors new.
+result := game play: #paper against: #rock.
+result "#paper"</code></pre>
+
+      <h4>3. Inheritance and Method Lookup</h4>
 
       <ul>
-        <li>Writing unit tests in Pharo</li>
-        <li>Test-driven development (TDD)</li>
-        <li>Extreme TDD</li>
-        <li>Design patterns</li>
-        <li>Good programming practices</li>
+        <li>Inheritance basics <a href="./slides/M1-3-Essence-03-Inheritance-Basic.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S3.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+        <li>Inheritance and Lookup: Self <a href="./slides/M1-4-Essence-04-Self.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S4.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+      </ul>
+
+      <h4>4. Kata: Rock-Paper-Scissors (double dispatch)</h4>
+
+      <p><a href="./exercises/PaperStoneScissor.pdf" target="_blank" rel="noopener noreferrer">[PDF]</a> In this exercise, you have to implement the Rock-Paper-Scissors game using a simple but powerful approach called double dispatch that consists of sending another message to the argument hence making two choices one after the other. This exercise will show you an important paradigmatic shift where you will go from asking questions (conditionals) to sending orders. It is a clear illustration of the <i>"Don’t ask, Tell"</i> design principle.</p>
+
+      <h4>Recommended videos</h4>
+
+      <ul>
+        <li><a href="https://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S1.mp4" target="_blank" rel="noopener noreferrer">Essence of dispatch: Taking Pharo Booleans as Example</a></li>
+        <li><a href="https://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S2_V2.mp4" target="_blank" rel="noopener noreferrer">Essence of Dispatch: Let the receiver decide</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S1.mp4" target="_blank" rel="noopener noreferrer">A double dispatch starter: Stone Paper Scissors</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S2.mp4" target="_blank" rel="noopener noreferrer">Double dispatch: Does not have to be symmetrical</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S6.mp4" target="_blank" rel="noopener noreferrer">Stone Paper Scissors: The case of results</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S7.mp4" target="_blank" rel="noopener noreferrer">Double Dispatch: Adding numbers as a Kata</a></li>
       </ul>
 
       <h2>Day 3: Building user interfaces with Spec</h2>
