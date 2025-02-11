@@ -97,6 +97,19 @@
     <main>
       <h1><span style="color: var(--color-dark-gray)">isLoop 2025</span> Program</h1>
 
+      <h2>Guided Exercises</h2>
+
+      <ul>
+        <li><a href="./exercises/Counter.pdf" target="_blank" rel="noopener noreferrer">A first tutorial: Developing a simple counter</a></li>
+        <li><a href="./exercises/DieForRollPlayingGame.pdf" target="_blank" rel="noopener noreferrer">Die: Crafting a simple embedded DSL with Pharo</a></li>
+        <li><a href="./exercises/PaperStoneScissor.pdf" target="_blank" rel="noopener noreferrer">Rock Paper Scissors</a></li>
+        <li><a href="./exercises/Robots.pdf" target="_blank" rel="noopener noreferrer">A little Saturn PathFinder</a> + an extra part: <a href="./exercises/Compass.pdf">Finding the North with Compass</a></li>
+        <li><a href="./exercises/CountryFlag.pdf" target="_blank" rel="noopener noreferrer">Country Flag</a></li>
+        <li><a href="./exercises/MemoryGame.pdf" target="_blank" rel="noopener noreferrer">A memory game: A simple tutorial with Bloc</a></li>
+        <li><a href="./exercises/Expressions.pdf" target="_blank" rel="noopener noreferrer">A little expression interpreter</a></li>
+        <li><a href="./exercises/Expressions-Visitor.pdf" target="_blank" rel="noopener noreferrer">Understanding Visitors</a></li>
+      </ul>
+
       <h2>Day 1: Introduction to Pharo and OOP</h2>
 
       <p>During this day, you will learn the survival kit to code in Pharo.
@@ -199,12 +212,28 @@ result "#paper"</code></pre>
 
       <ul>
         <li>Searching for examples in Finder with regex</li>
-        <li>Exploring abstract syntax trees</li>
+        <li>Exploring bytecode and abstract syntax trees (AST)</li>
+
+        <p>Open Playground write a method signature like this: <code>Collection >> #do:</code> and inspect it. Navigate through inspector tabs to see the bytecode or the AST.</p>
+
         <li>Extreme test-driven development: writing code in the debugger</li>
-        <li>Deprecation rewriting</li>
+
+        <ul>
+          <li>Test-Driven Development <a href="./slides/M2-3-Tests-03-TDD.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M02_S3.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+          <li>Xtreme Test Driven Development: Getting a productivity boost <a href="./slides/M2-4-Tests-04-XTDD.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M02_S4_V2.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+        </ul>
+
+        <li>Deprecation rewriting <a href="http://www.jot.fm/issues/issue_2022_01/article1.pdf" target="_blank" rel="noopener noreferrer">[paper]</a></li>
       </ul>
 
       <h4>Recommended videos</h4>
+
+      <ul>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S6-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Introduction to blocks</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S9-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Parenthesis Vs Square Brackets</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M05_S6_V2.mp4" target="_blank" rel="noopener noreferrer">Blocks vs. Objects: Rethinking common abstractions</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S2-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Messages for Java programmers</a></li>
+      </ul>
 
       <h2>Day 4: Spec, Inspector Extensions & Deeper into Dispatch</h2>
 
