@@ -234,6 +234,113 @@ footer span {
   text-decoration: none;
 }
 
+/* Timeline table: mobile-first (cards) */
+
+.timeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.2em;
+}
+
+/* Hide header on mobile */
+.timeline-table thead {
+  display: none;
+}
+
+/* Each row becomes a card */
+.timeline-table tbody tr {
+  display: block;
+  margin: 0 0 0.9rem 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Cells stack */
+.timeline-table tbody td {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  line-height: 140%;
+}
+
+.timeline-table tbody td:last-child {
+  border-bottom: 0;
+}
+
+/* Label + value layout */
+.timeline-table tbody td[data-label]::before {
+  content: attr(data-label);
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-dark-gray);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Shared rows */
+.timeline-table tbody tr.shared td {
+  background-color: var(--color-pharo-light-blue);
+  border-bottom: 0;
+}
+
+.timeline-table tbody tr.shared td[colspan="2"] {
+  text-align: left;
+}
+
+/* Optional: make the time a bit more prominent */
+.timeline-table tbody td:first-child b {
+  font-size: 1.05rem;
+}
+
+/* Program track switcher */
+
+.track-switch {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.track-button {
+  appearance: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: var(--color-dark-gray);
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--text-font-family);
+  font-size: 1rem;
+}
+
+.track-button:hover {
+  background: var(--color-pharo-light-blue);
+}
+
+.track-button.active {
+  border-color: var(--color-pharo-blue);
+  background: var(--color-pharo-light-blue);
+  color: var(--color-pharo-blue);
+}
+
+.track-content {
+  display: none;
+}
+
+.track-content.active {
+  display: block;
+}
+
+/* Optional: slightly reduce heading spacing inside the track content */
+.track-content h2 {
+  margin-top: 1rem;
+}
+
 @media only screen and (min-width: 768px) { 
   main {
     padding-bottom: 3rem;
@@ -273,5 +380,78 @@ footer span {
 
   .teacher-text h3 {
     margin-top: 0;
+  }
+
+  /* Timeline table: switch back to classic table */
+  .timeline-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .timeline-table thead {
+    display: table-header-group;
+  }
+
+  .timeline-table tbody {
+    display: table-row-group;
+  }
+
+  .timeline-table tbody tr {
+    display: table-row;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  /* IMPORTANT: override the mobile rule with same specificity */
+  .timeline-table tbody td {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 0.9rem 1rem;
+    vertical-align: top;
+    text-align: left;
+    line-height: 140%;
+    background-color: transparent;
+  }
+
+  .timeline-table thead th {
+    display: table-cell;
+    border: 1px solid #ddd;
+    padding: 0.9rem 1rem;
+    text-align: left;
+    background-color: var(--color-pharo-light-blue);
+    color: var(--color-dark-gray);
+    font-weight: 600;
+  }
+
+  /* Remove labels on desktop */
+  .timeline-table tbody td[data-label]::before {
+    content: none;
+  }
+
+  /* Zebra striping on desktop */
+  .timeline-table tbody tr:nth-child(odd) td {
+    background-color: #fff;
+  }
+
+  .timeline-table tbody tr:nth-child(even) td {
+    background-color: var(--color-light-gray);
+  }
+
+  /* Shared rows on desktop */
+  .timeline-table tr.shared td {
+    background-color: var(--color-pharo-light-blue) !important;
+  }
+
+  .timeline-table tr.shared td[colspan="2"] {
+    text-align: center;
+  }
+
+  /* Time column readability */
+  .timeline-table tbody td:first-child,
+  .timeline-table thead th:first-child {
+    white-space: nowrap;
+    width: 10rem;
   }
 }

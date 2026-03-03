@@ -4,4 +4,3 @@ function insertMailto(id, place, me) {
 }
 
 insertMailto("mlink1", "pharo.org", "isloop");
-insertMailto("mlink2", "inria.fr", "stephane.ducasse");

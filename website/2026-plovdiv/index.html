@@ -167,14 +167,52 @@
 
       <p>This is the default rhythm of a day. Exact details (rooms, breaks, and topics) will be published on the Program page.</p>
       
-      <ul>
-        <li><b>10:00 - 11:30:</b> Practice (1h30)</li>
-        <li><b>11:30 - 12:30:</b> Lecture / Guided session (1h)</li>
-        <li><b>12:30 - 14:30:</b> Lunch (2h)</li>
-        <li><b>14:30 - 15:30:</b> Lecture / Guided session (1h)</li>
-        <li><b>15:30 - 17:30:</b> Practice / Project / Sprint (2h)</li>
-        <li><b>17:30 - 18:00:</b> Daily demos (shared)</li>
-      </ul>
+      <div class="table-wrapper">
+        <div class="table-scroll">
+          <table class="timeline-table">
+            <thead>
+              <tr>
+                <th style="width: 10rem;">Time</th>
+                <th>Track A: Beginners</th>
+                <th>Track B: Advanced and collaborative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Time"><b>10:00 - 11:30</b></td>
+                <td data-label="Track A">Guided practice (MOOC-style exercises, small steps)</td>
+                <td data-label="Track B">Deep dive / peer session (tools, practices, micro-talks)</td>
+              </tr>
+              <tr>
+                <td data-label="Time"><b>11:30 - 12:30</b></td>
+                <td data-label="Track A">Short lecture + guided workshop</td>
+                <td data-label="Track B">Collaborative workshop (kata, design review, group discussion)</td>
+              </tr>
+
+              <tr class="shared">
+                <td data-label="Time"><b>12:30 - 14:30</b></td>
+                <td colspan="2"><b>Lunch</b> (shared)</td>
+              </tr>
+
+              <tr>
+                <td data-label="Time"><b>14:30 - 15:30</b></td>
+                <td data-label="Track A">Hands-on lab (debugging, tests, refactoring basics)</td>
+                <td data-label="Track B">Sprint planning / focused session (issues, pairing, reviews)</td>
+              </tr>
+              <tr>
+                <td data-label="Time"><b>15:30 - 17:30</b></td>
+                <td data-label="Track A">Mini-project work (pairs / small groups, mentor support)</td>
+                <td data-label="Track B">Open source sprint / team work (PRs, code review, mentoring)</td>
+              </tr>
+
+              <tr class="shared">
+                <td data-label="Time"><b>17:30 - 18:00</b></td>
+                <td colspan="2"><b>Daily demos</b> (shared)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       <h2>What you need</h2>
 
@@ -186,14 +224,7 @@
             rel="noopener noreferrer"
             href="https://pharo.org/download"
           >https://pharo.org/download</a>
-          (if you have problems with installation, don't hesitate to contact us at
-            <!-- Obfuscated email address -->
-            <a id="mlink1" href="#">
-              <span class="ltrText">
-                gro&#46;or<!-- bots -->ahp&#64;<!--
-                -->poo<!-- go away -->lsi
-              </span>
-            </a>)
+          (if you have problems with installation, don't hesitate to contact us)
         </li>
         <li>For Track B, previous experience with any OO language is enough. Prior Pharo knowledge is welcome but not required.</li>
       </ul>

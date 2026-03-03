@@ -95,7 +95,134 @@
     <main>
       <h1><span style="color: var(--color-dark-gray)">isLoop 2026</span> Program</h1>
 
-      <p>Program will be published soon</p>
+      <p>
+        isLoop has two parallel tracks. Use the buttons below to view the program for each track.
+      </p>
+
+      <div class="track-switch" role="tablist" aria-label="Program tracks">
+        <button
+          type="button"
+          class="track-button active"
+          data-track="a"
+          role="tab"
+          aria-selected="true"
+          aria-controls="track-a"
+          id="track-a-tab"
+        >
+          Track A: Beginners
+        </button>
+
+        <button
+          type="button"
+          class="track-button"
+          data-track="b"
+          role="tab"
+          aria-selected="false"
+          aria-controls="track-b"
+          id="track-b-tab"
+        >
+          Track B: Advanced and collaborative
+        </button>
+      </div>
+
+      <section id="track-a" class="track-content active" role="tabpanel" aria-labelledby="track-a-tab">
+        <h2>Track A: Beginners</h2>
+
+        <p>
+          This track is for absolute beginners in Pharo (and beginners in OO who want a solid foundation).
+          It is structured like the Pharo MOOC: short explanations followed by lots of guided practice.
+        </p>
+
+        <h3>Guided exercises</h3>
+        <p>
+          We will provide exercise PDFs and repositories. The list below reflects the typical path (final links will be published soon).
+        </p>
+
+        <ul>
+          <li><b>Counter</b>: packages, classes, tests, debugger workflow</li>
+          <li><b>Dice / small embedded DSL</b>: messages as a domain language</li>
+          <li><b>Rock-Paper-Scissors</b>: move from if/else to message sending (double dispatch)</li>
+          <li><b>Mini project</b>: a small interactive app or simulation (in pairs or small groups)</li>
+        </ul>
+
+        <h3>Day 1: Introduction to Pharo and live programming</h3>
+        <ul>
+          <li>Welcome and installation check (Pharo Launcher, image, tools)</li>
+          <li>First look at Playground, Inspector, System Browser, Debugger</li>
+          <li>Objects and messages: explore by inspecting and changing code while it runs</li>
+          <li>Start the Counter exercise (tests + debugging)</li>
+        </ul>
+
+        <h3>Day 2: Object modeling, collections, and dispatch thinking</h3>
+        <ul>
+          <li>Collections and blocks: the everyday toolbox</li>
+          <li>Finish / extend the Counter exercise</li>
+          <li>Rock-Paper-Scissors kata: refactor from conditionals to message sending</li>
+          <li>Start the mini project</li>
+        </ul>
+
+        <h3>Day 3: Design basics and finishing a complete small project</h3>
+        <ul>
+          <li>Refactoring clinic: smaller methods, clearer responsibilities</li>
+          <li>Testing and debugging habits: repeatable workflow</li>
+          <li>Finish the mini project with mentor feedback</li>
+          <li>Prepare a short demo for the daily demo session</li>
+        </ul>
+
+        <h3>Recommended resources</h3>
+        <ul>
+          <li><a href="https://mooc.pharo.org/" target="_blank" rel="noopener noreferrer">Pharo MOOC</a></li>
+          <li><a href="https://pharo.org/documentation" target="_blank" rel="noopener noreferrer">Pharo documentation</a></li>
+          <li><a href="https://pharo.org/download" target="_blank" rel="noopener noreferrer">Download Pharo</a></li>
+        </ul>
+      </section>
+
+      <section id="track-b" class="track-content" role="tabpanel" aria-labelledby="track-b-tab">
+        <h2>Track B: Advanced and collaborative</h2>
+
+        <p>
+          This track is for experienced programmers who want to deepen their Pharo practice and learn from each other.
+          It is less lecture-driven and more sprint-oriented: peer sessions, katas, code reviews, and open source contributions.
+        </p>
+
+        <h3>Core activities</h3>
+        <ul>
+          <li><b>Micro-talks</b>: short experience sharing (tools, idioms, workflows)</li>
+          <li><b>Coding katas</b>: TDD and refactoring in pairs, rotating partners</li>
+          <li><b>Open source sprint</b>: pick issues, pair, submit PRs, review</li>
+          <li><b>Deep dives</b>: Inspector/Debugger workflows, profiling, reflection</li>
+        </ul>
+
+        <h3>Day 1: Align on practices and pick sprint targets</h3>
+        <ul>
+          <li>Lightning round: participant micro-talks</li>
+          <li>Tool-focused peer session (debugger workflows, inspectors, profiling)</li>
+          <li>Sprint setup: choose repositories, issues, and small teams</li>
+          <li>Warm-up kata + shared code review checklist</li>
+        </ul>
+
+        <h3>Day 2: Open source sprint</h3>
+        <ul>
+          <li>Pair programming on real issues (bugfixes, features, docs)</li>
+          <li>PRs and reviews across teams</li>
+          <li>Short checkpoints to unblock and rescope</li>
+        </ul>
+
+        <h3>Day 3: Kata, architecture jam, and wrapping contributions</h3>
+        <ul>
+          <li>Kata rotations: TDD and refactoring under time pressure</li>
+          <li>Architecture jam: small design challenge and discussion of tradeoffs</li>
+          <li>Wrap up PRs, documentation, and next steps</li>
+          <li>Prepare a short demo for the daily demo session</li>
+        </ul>
+
+        <h3>Recommended resources</h3>
+        <ul>
+          <li><a href="https://advanced-design-mooc.pharo.org/" target="_blank" rel="noopener noreferrer">Advanced Design MOOC</a></li>
+          <li><a href="https://pharo.org/contribute" target="_blank" rel="noopener noreferrer">How to contribute to Pharo</a></li>
+          <li><a href="https://pharo.org/documentation" target="_blank" rel="noopener noreferrer">Pharo documentation</a></li>
+        </ul>
+      </section>
 
     </main>
 
@@ -149,5 +276,39 @@
     </footer>
     
     <script src="./script.js"></script>
+
+    <script>
+      (function () {
+        const buttons = document.querySelectorAll(".track-button");
+        const panels = document.querySelectorAll(".track-content");
+
+        function activate(track) {
+          buttons.forEach((b) => {
+            const isActive = b.getAttribute("data-track") === track;
+            b.classList.toggle("active", isActive);
+            b.setAttribute("aria-selected", isActive ? "true" : "false");
+          });
+
+          panels.forEach((p) => {
+            p.classList.toggle("active", p.id === (track === "b" ? "track-b" : "track-a"));
+          });
+
+          // Optional: reflect selection in URL for sharing
+          history.replaceState(null, "", track === "b" ? "#track-b" : "#track-a");
+        }
+
+        function initialTrack() {
+          const h = (location.hash || "").toLowerCase();
+          if (h === "#track-b") return "b";
+          return "a";
+        }
+
+        buttons.forEach((b) => {
+          b.addEventListener("click", () => activate(b.getAttribute("data-track")));
+        });
+
+        activate(initialTrack());
+      })();
+    </script>
   </body>
 </html>
