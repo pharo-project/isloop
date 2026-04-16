@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  itemscope
+  itemtype="https://schema.org/WebPage"
+  prefix="og:http://ogp.me/ns#"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>isLoop: International School on Live Object-Oriented Programming</title>
+
+    <link rel="canonical" href="https://isloop.pharo.org" />
+    <link rel="icon" type="image/png" href="./img/icons/64x64.png" />
+    <!-- <link rel="manifest" href="./manifest.json" /> -->
+
+    <!-- General -->
+    <meta
+      name="application-name"
+      content="isLoop: International School on Live Object-Oriented Programming"
+    />
+    <meta name="author" content="Oleksandr Zaitsev" />
+    
+    <meta
+      name="description"
+      content="Learn advanced object-oriented programming in Pharo"
+    />
+    <meta
+      name="keywords"
+      content="pharo, summer school, winter school, object-oriented programming,
+      programming, live programming, learn programming"
+    />
+    <meta name="referrer" content="strict-origin" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Webpage",
+        "url": "https://isloop.pharo.org/",
+        "name": "isLoop: International School on Live Object-Oriented Programming",
+        "headline": "isLoop: International School on Live Object-Oriented Programming",
+        "description": "Learn advanced object-oriented programming in Pharo",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://isloop.pharo.org"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Oleksandr Zaitsev"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "./img/gdansk.jpg",
+          "width": 1000,
+          "height": 667
+        },
+        "datePublished": "2026-03-02",
+        "keywords": "pharo, summer school, object-oriented programming, programming, live programming, learn programming"
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Top menu icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-buttons" id="nav-buttons">
+          <a href=".." rel="noopener noreferrer">isLoop</a>
+          <a href="." rel="noopener noreferrer">Home</a>
+          <a href="./program" rel="noopener noreferrer" class="active">Program</a>
+          <a href="javascript:void(0);" class="icon" onclick="toggleTopMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1><span style="color: var(--color-dark-gray)">isLoop 2025</span> Program</h1>
+
+      <h2>Guided Exercises</h2>
+
+      <ul>
+        <li><a href="./exercises/Counter.pdf" target="_blank" rel="noopener noreferrer">A first tutorial: Developing a simple counter</a></li>
+        <li><a href="./exercises/DieForRollPlayingGame.pdf" target="_blank" rel="noopener noreferrer">Die: Crafting a simple embedded DSL with Pharo</a></li>
+        <li><a href="./exercises/PaperStoneScissor.pdf" target="_blank" rel="noopener noreferrer">Rock Paper Scissors</a></li>
+        <li><a href="./exercises/Robots.pdf" target="_blank" rel="noopener noreferrer">A little Saturn PathFinder</a> + an extra part: <a href="./exercises/Compass.pdf">Finding the North with Compass</a></li>
+        <li><a href="./exercises/CountryFlag.pdf" target="_blank" rel="noopener noreferrer">Country Flag</a></li>
+        <li><a href="./exercises/MemoryGame.pdf" target="_blank" rel="noopener noreferrer">A memory game: A simple tutorial with Bloc</a></li>
+        <li><a href="./exercises/Expressions.pdf" target="_blank" rel="noopener noreferrer">A little expression interpreter</a></li>
+        <li><a href="./exercises/Expressions-Visitor.pdf" target="_blank" rel="noopener noreferrer">Understanding Visitors</a></li>
+      </ul>
+
+      <h2>Day 1: Introduction to Pharo and OOP</h2>
+
+      <p>During this day, you will learn the survival kit to code in Pharo.
+        You will learn the syntax and the main tools to code and publish code.
+        After that day you will be able to code in Pharo. You will also learn
+        the simple object model of Pharo, understand what are objects and classes,
+        learn the difference between messages and methods, learn to create packages,
+        classes and methods in System Browser.</p>
+
+      <h3>1. Welcome</h3>
+
+      <ul>
+        <li>Welcome words</li>
+        <li>What is Pharo? <a href="./slides/C019-W1S02-WhatIsPharo.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S2-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video EN]</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S2-v2.mp4" target="_blank" rel="noopener noreferrer">[video FR]</a></li>
+        <li>Install Pharo <a href="https://pharo.org/download" target="_blank" rel="noopener noreferrer">[download]</a></li>
+        <li>First look and Hello World in Pharo environment</li>
+        <li>First look at the environment: Playground, Inspector, System Browser, Debugger</li>
+      </ul>
+
+      <h3>2. ProfStef Tutorial</h3>
+
+      <p>Open the Playground and evaluate the following line: <code>ProfStef go.</code></p>
+
+      <h3>4. Objects and Classes</h3>
+
+      <ul>
+        <li>Pharo object model in a nutshell <a href="./slides/C019-W1S04-PharoModelInaNushell.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S4-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+        <li>Class and method definition <a href="./slides/C019-W1S06-ClassAndMethodDefinition.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S6-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+      </ul>
+
+      <h3>5. Exercise: Counter</h3>
+
+      <p><a href="./exercises/Counter.pdf" target="_blank" rel="noopener noreferrer">[PDF]</a> In this exercise you will learn how to create packages, classes, methods, instances,
+      unit tests and more. This tutorial covers most of the important actions you will perform when developing in Pharo.</p>
+
+      <h3>Recommended videos</h3>
+
+      <ul>
+        <li><a href="https://youtu.be/dEUcZolohlw" target="_blank" rel="noopener noreferrer">Understanding return</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S10-EN-V1.mp4" target="_blank" rel="noopener noreferrer">yourself</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S6-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Class methods</a></li>
+      </ul>
+
+      <h2>Day 2: Inheritance, Method Lookup, and Dispatch</h2>
+
+      <p>You will learn about inheritance and polymorphism - the key concepts in object-oriented programming. You will understand why sending a message is making a choice based on classes. You will also understand what is to send a message and how lookup works.</p>
+
+      <h3>1. Exercise: Counter</h3>
+
+      <p>Finish the exercise.</p>
+
+      <h3>2. Kata: Rock-Paper-Scissors (if-else)</h3  >
+
+      <p>This exercise consists of implementing the rock paper scissor game. For this, you will need to have a class named <code>RockPaperScissors</code>. For playing the game, the user needs to use the class like this:</p>
+
+      <pre><code>game := RockPaperScissors new.
+result := game play: #paper against: #rock.
+result "#paper"</code></pre>
+
+      <h3>3. Inheritance and Method Lookup</h3>
+
+      <ul>
+        <li>Inheritance basics <a href="./slides/M1-3-Essence-03-Inheritance-Basic.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S3.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+        <li>Inheritance and Lookup: Self <a href="./slides/M1-4-Essence-04-Self.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S4.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+      </ul>
+
+      <h3>4. Kata: Rock-Paper-Scissors (double dispatch)</h3>
+
+      <p><a href="./exercises/PaperStoneScissor.pdf" target="_blank" rel="noopener noreferrer">[PDF]</a> In this exercise, you have to implement the Rock-Paper-Scissors game using a simple but powerful approach called double dispatch that consists of sending another message to the argument hence making two choices one after the other. This exercise will show you an important paradigmatic shift where you will go from asking questions (conditionals) to sending orders. It is a clear illustration of the <i>"Don’t ask, Tell"</i> design principle.</p>
+
+      <h3>Recommended videos</h3>
+
+      <ul>
+        <li><a href="https://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M01_S2_V2.mp4" target="_blank" rel="noopener noreferrer">Essence of Dispatch: Let the receiver decide</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S1.mp4" target="_blank" rel="noopener noreferrer">A double dispatch starter: Stone Paper Scissors</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S2.mp4" target="_blank" rel="noopener noreferrer">Double dispatch: Does not have to be symmetrical</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S6.mp4" target="_blank" rel="noopener noreferrer">Stone Paper Scissors: The case of results</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M06_S7.mp4" target="_blank" rel="noopener noreferrer">Double Dispatch: Adding numbers as a Kata</a></li>
+      </ul>
+
+      <h2>Day 3: Messages and Advanced Topics</h2>
+
+      <h3>1. Exercise: Rock-Paper-Scissors</h3>
+
+      <p>Finish the exercise.</p>
+
+      <h3>2. Messages</h3>
+
+      <ul>
+        <li>Understanding messages <a href="./slides/C019-W2S01-Messages.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S1-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video EN]</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S1-v3.mp4" target="_blank" rel="noopener noreferrer">[video FR]</a></li>
+        <li>Message composition and precedence <a href="./slides/C019-W2S03-Messages-Precedence.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S3-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video EN]</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S3-v3.mp4" target="_blank" rel="noopener noreferrer">[video FR]</a></li>
+        <li>Message sequence and cascade messages <a href="./slides/C019-W2S04-Messages-Sequence.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S4-EN-V1.mp4" target="_blank" rel="noopener noreferrer">[video EN]</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S4-v3.mp4" target="_blank" rel="noopener noreferrer">[video FR]</a></li>
+      </ul>
+
+      <h3>3. Advanced Topics from Stéphane</h3>
+
+      <ul>
+        <li>Searching for examples in Finder with regex</li>
+        <li>Exploring bytecode and abstract syntax trees (AST)</li>
+
+        <p>Open Playground write a method signature like this: <code>Collection >> #do:</code> and inspect it. Navigate through inspector tabs to see the bytecode or the AST.</p>
+
+        <li>Extreme test-driven development: writing code in the debugger</li>
+
+        <ul>
+          <li>Test-Driven Development <a href="./slides/M2-3-Tests-03-TDD.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M02_S3.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+          <li>Xtreme Test Driven Development: Getting a productivity boost <a href="./slides/M2-4-Tests-04-XTDD.pdf" target="_blank" rel="noopener noreferrer">[slides]</a> <a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M02_S4_V2.mp4" target="_blank" rel="noopener noreferrer">[video]</a></li>
+        </ul>
+
+        <li>Deprecation rewriting <a href="http://www.jot.fm/issues/issue_2022_01/article1.pdf" target="_blank" rel="noopener noreferrer">[paper]</a></li>
+      </ul>
+
+      <h3>Recommended videos</h3>
+
+      <ul>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S6-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Introduction to blocks</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S9-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Parenthesis Vs Square Brackets</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/AdvancedDesignMooc/Videos/M05_S6_V2.mp4" target="_blank" rel="noopener noreferrer">Blocks vs. Objects: Rethinking common abstractions</a></li>
+        <li><a href="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S2-EN-V1.mp4" target="_blank" rel="noopener noreferrer">Messages for Java programmers</a></li>
+      </ul>
+
+      <h3>Some Cool Projects</h3>
+      
+       <p>Here are some cool projects that you can explore to see the power of Pharo and live programming:</p>
+
+      <ul>
+        <li><a href="https://youtu.be/CuimMwuZiGA" target="_blank" rel="noopener noreferrer">Roassal City Layouts</a></li>
+        <li><a href="https://youtu.be/QJu8GVXFqtk" target="_blank" rel="noopener noreferrer">Pharo IoT Technology - Demos (compilation)</a></li>
+        <li><a href="https://youtu.be/b4nNtN7XBi8" target="_blank" rel="noopener noreferrer">Virtual Reality Live at Thales with Pharo</a></li>
+        <li><a href="https://youtu.be/F1RwJs3vjcY" target="_blank" rel="noopener noreferrer">Phausto - ADC24 Poster Session Video</a></li>
+        <li><a href="https://youtu.be/zP1GVVrydOs" target="_blank" rel="noopener noreferrer">Phausto: The Sound Within Pharo</a></li>
+      </ul>
+
+    </main>
+
+    <footer>
+      <p>
+        <b>&copy; 2024. All rights reserved</b> by
+        <span>
+          <a href="https://consortium.pharo.org" target="_blank" rel="noopener">
+            Pharo Consortium
+          </a>
+        </span>
+      </p>
+      <p>The source code of this website is licensed under
+        <a
+          href="https://github.com/pharo-project/isloop/blob/main/LICENSE"
+          target="_blank"
+          rel="license noopener noreferrer">The MIT License</a>
+        and <span>available on
+        <a
+          href="https://github.com/pharo-project/isloop"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a></span>
+      </p>
+
+      <p><b>isLoop</b> is supported by CIRAD (UMR SENS), Inria (Evref)
+        and the <span>University of Novi Sad.</span></p>
+
+      <div class="footer-logos">
+        <span>
+          <a href="https://www.cirad.fr/" rel="noopener">
+            <img src="./img/logos/cirad.png">
+          </a>
+          <a href="https://umr-sens.fr" rel="noopener">
+            <img src="./img/logos/sens.png">
+          </a>
+        </span>
+        <span>
+          <a href="https://inria.fr/" rel="noopener">
+            <img src="./img/logos/inria.png">
+          </a>
+          <a href="https://www.inria.fr/en/evref" rel="noopener">
+            <img src="./img/logos/evref.png">
+          </a>
+        </span>
+        <span>
+          <a href="https://www.uns.ac.rs/index.php/en/" rel="noopener">
+            <img src="./img/logos/novisad.png">
+          </a>
+        </span>
+      </div>
+    </footer>
+    
+    <script src="./script.js"></script>
+
+    <script>
+      (function () {
+        const buttons = document.querySelectorAll(".track-button");
+        const panels = document.querySelectorAll(".track-content");
+
+        function activate(track) {
+          buttons.forEach((b) => {
+            const isActive = b.getAttribute("data-track") === track;
+            b.classList.toggle("active", isActive);
+            b.setAttribute("aria-selected", isActive ? "true" : "false");
+          });
+
+          panels.forEach((p) => {
+            p.classList.toggle("active", p.id === (track === "b" ? "track-b" : "track-a"));
+          });
+
+          // Optional: reflect selection in URL for sharing
+          history.replaceState(null, "", track === "b" ? "#track-b" : "#track-a");
+        }
+
+        function initialTrack() {
+          const h = (location.hash || "").toLowerCase();
+          if (h === "#track-b") return "b";
+          return "a";
+        }
+
+        buttons.forEach((b) => {
+          b.addEventListener("click", () => activate(b.getAttribute("data-track")));
+        });
+
+        activate(initialTrack());
+      })();
+    </script>
+  </body>
+</html>
